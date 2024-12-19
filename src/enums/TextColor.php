@@ -1,5 +1,5 @@
 <?php
-namespace Pyro100\CliUtils;
+namespace Pyro100\CliUtils\Enums;
 enum TextColor: string
 {
     case BLACK = '0;30';
