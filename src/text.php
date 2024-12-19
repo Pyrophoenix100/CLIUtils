@@ -1,26 +1,29 @@
 <?php
 namespace Pyro100\CliUtils;
-class Text {
+enum TextColor: string
+{
+    case BLACK = '0;30';
+    case DARK_GRAY = '1;30';
+    case BLUE = '0;34';
+    case LIGHT_BLUE = '1;34';
+    case GREEN = '0;32';
+    case LIGHT_GREEN = '1;32';
+    case CYAN = '0;36';
+    case LIGHT_CYAN = '1;36';
+    case RED = '0;31';
+    case LIGHT_RED = '1;31';
+    case PURPLE = '0;35';
+    case LIGHT_PURPLE = '1;35';
+    case BROWN = '0;33';
+    case YELLOW = '1;33';
+    case LIGHT_GRAY = '0;37';
+    case WHITE = '1;37';
+}
+class Text
+{
+    static function Colored($text, TextColor $color)
+    {
 
-    static function Colored($text, $color) {
-        $colors = [
-            'black' => '0;30',
-            'dark_gray' => '1;30',
-            'blue' => '0;34',
-            'light_blue' => '1;34',
-            'green' => '0;32',
-            'light_green' => '1;32',
-            'cyan' => '0;36',
-            'light_cyan' => '1;36',
-            'red' => '0;31',
-            'light_red' => '1;31',
-            'purple' => '0;35',
-            'light_purple' => '1;35',
-            'brown' => '0;33',
-            'yellow' => '1;33',
-            'light_gray' => '0;37',
-            'white' => '1;37',
-        ];
-        return "\033[" . $colors[$color] . "m" . $text . "\033[0m";
+        return "\033[" . $color->value . "m" . $text . "\033[0m";
     }
 }
