@@ -1,0 +1,16 @@
+{
+    "name": "pyro100/cli-utils",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Pyro100\\CliUtils\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alec Tuchscherer",
+            "email": "alectuc@gmail.com"
+        }
+    ],
+    "require": {}
+}
